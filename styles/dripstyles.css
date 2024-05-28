@@ -1,0 +1,22 @@
+
+body {
+    overflow: hidden;
+    margin : 0;
+    background: #000;
+    width:100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  main{width:640px;margin: 100px auto;}
+
+  .dripcan {
+    width:800px;
+
+
+  }
+
+  .hidden {
+    display:none;
+  }
