@@ -1,0 +1,326 @@
+<html>
+    <head>
+
+       
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    </head>
+<style>
+    body {
+        background:rgba(0, 0, 0, 0) url(images/ClipBG600.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+    }
+
+    .frame {
+        position:absolute;height:100%;width:100%;
+    }
+   
+</style>
+
+    <body style="width:800px; overflow:hidden;margin:0;padding:0;">
+       <style>
+         .hidden {
+        display:none;
+    }
+    .show {
+        display: block;
+    }
+
+    .scene-main {
+        overflow:hidden; width:600px; height:460px;display:flex; flex-direction:column;justify-content: center;
+    }
+
+    .chainsaw {
+max-width:200px; width:100%;position:absolute;bottom:-100;right:25%;display:block;
+transition-duration: 1.3s;
+    }
+
+    @font-face {
+    font-family: DoomMenu;
+    src: url("fonts/doom.ttf");
+}
+    .hudlink1 {
+        font-family: DoomMenu;
+    color: red;
+    bottom: 0;
+    position: relative;
+    font-size: 10px;
+    display: flex;
+    text-decoration: none;
+    left:1%; color:rgb(247, 255, 2);
+    }
+
+    .hudlink2 {
+        font-family: DoomMenu;
+    color: red;
+    bottom: 0;
+    position: relative;
+    font-size: 10px;
+    display: flex;
+    text-decoration: none;
+    left:3.5%
+    }
+
+    .hudlink3 {
+        font-family: DoomMenu;
+    color: red;
+    bottom: 0;
+    position: relative;
+    font-size: 10px;
+    display: flex;
+    text-decoration: none;
+    left:37%; color:rgb(247, 255, 2);
+    }
+
+    .hudlink4 {
+        font-family: DoomMenu;
+    color: red;
+    bottom: 0;
+    position: relative;
+    font-size: 10px;
+    display: flex;
+    text-decoration: none;
+    left:43.5%; color:rgb(247, 255, 2);
+    }
+
+    .hudlink1:hover .hovtip {
+        display:block;
+    }
+    .hudlink2:hover .hovtip {
+        display:block;
+    }
+    .hudlink3:hover .hovtip {
+        display:block;
+    }
+    .hudlink4:hover .hovtip {
+        display:block;
+    }
+    .hudNav {
+        position: absolute;
+    bottom: -100;
+    width: 100%;
+    height: 15px;
+    display: flex;
+    z-index: 90;
+    transition-duration: 1.3s;
+    }
+
+    .twerkit {
+        position: absolute;
+        height: 49px;
+        bottom: 6;
+        left: 37%;
+    }
+
+    .twerkitAlt {
+        position: absolute;
+        height: 49px;
+        bottom: 6;
+        right: 37%;
+    }
+
+    .nspDiskIcon {
+        position: absolute;
+        bottom:15;
+        width: 50px;
+        left: 25.5%;
+    }
+
+    .d0ng3rLinkIcon {
+        position: absolute;
+        bottom:20;
+        width: 75px;
+        left: 0%;
+    }
+
+    .infocon {
+        position: absolute;
+        bottom:30;
+        width: 25px;
+        left: 55%;
+        /* opacity: 0.7; */
+    }
+
+    .ColCLogo {
+        position: absolute;
+        bottom:18;
+        width: 30px;
+        left: 2%;
+        
+    }
+
+    .GZicon {
+        position: absolute;
+        bottom:20;
+        width: 35px;
+        left: 25.5%;
+    }
+
+    .Switchicon {
+        position: absolute;
+        bottom:15;
+        width: 20px;
+        left: 55%;
+    }
+
+    .hovtip {
+        position: absolute;
+        bottom: 60;
+        width: 150px;
+        display: none;
+        background-color: black;
+        border: 1px solid red;
+        border-radius: 10px;
+        padding: 8px;
+        
+    }
+
+    .HUDimg {
+       
+        transition-duration: 1.3s;
+    }
+
+    .chainsaw.on {
+         bottom: 48; 
+    }
+    .hudNav.on {
+         bottom: 0; 
+    }
+
+    .HUDimg.on {
+        bottom: 0;
+    }
+
+    .textflash {
+        position: absolute;
+    z-index: 93;
+    top: 0;
+    max-width: 600px;
+    height: 400px;
+    opacity: .5;
+        
+    }
+
+    .frame {
+        border-width: 0px;
+    }
+
+    .textflash.hidden {
+        display: none;
+    }
+    .textflash.show {
+        display: block;
+    }
+    .video-playerClip.hidden {
+        display:none;
+        /* opacity: 0; */
+    }
+
+    .video-playerClip.show {
+        display:block;
+        /* opacity: 1; */
+    }
+  
+       </style>
+        <iframe src="thedrip.html" class="frame" id="title" title="drip drip"></iframe>
+        <div class="video-player">
+            <video id="videoPlayer2" class="video-playerClip hidden" width="800" height="600" autoplay="true" muted="true" loop="true" style="position: absolute;
+            z-index: 0;
+            top: -100;
+            margin: auto;
+            left: -110;">
+                <source src="video/CoCollectionClip.mp4" type="video/mp4" />
+            </video>
+
+                </div>
+
+                
+        
+        
+           </div>
+        <div class="scene-main">
+            
+            <!-- <img src="images/Chainsaw_anim.webp" id="chain" class="chainsaw"> -->
+            </div>
+        <div id="scene-main2" class="classicHUD" style=" overflow:hidden; width:600px; height:460px;display:flex; flex-direction:column;justify-content: center;">
+            <img class="HUDimg" src="images/DoomHUD.gif" style=" max-width:800px; width:100%;min-height: 50px;position:absolute;bottom:0;">
+            </div>
+            <div class="hudNav">
+               
+                <img src="images/Twerkin.gif" class="twerkit">
+             
+                <a id="projects" href="projectsref.html" target=”_blank” class="hudlink1"> <span class="hovtip">My other Switch GZDoom packs</span><img class="d0ng3rLinkIcon" src="images/D0ng3rMOARIcon.png">MY WORK</a>
+               
+                
+                
+
+                <a id="downloadNSP" href="https://drive.google.com/file/d/1_FGITbAvsffXp6E9lx1pojnLQeSHGNzr/view" target=”_blank” class="hudlink2"><span class="hovtip">Download DOOM: The Columbine Collection</span><img class="nspDiskIcon" src="images/nspDownload.png">DOWNLOAD</a>
+                
+                <img src="images/TwerkinAlt.gif" class="twerkitAlt">
+
+                <a id="education" href="https://www.acolumbinesite.com/reports/report.php" target=”_blank” class="hudlink3"><img class="infocon" src="images/InfoIcon.png"><span class="hovtip">Excellent source for information surrounding the Columbine events</span><img class="ColCLogo" src="images/ColCIcon.png">INFO</a>
+
+                <a id="gzSource" href="https://github.com/fgsfdsfgs/gzdoom" target=”_blank” class="hudlink4"><span class="hovtip" style="margin-left:-50px;">The original port of GZDoom for the Switch</span><img class="GZicon" src="images/Circle_gzdoom.png"><img class="Switchicon" src="images/SwitchIconDarker.png">GZDOOM</a>
+            </div>
+       
+            
+            <img class="textflash hidden" src="images/NoReason.gif">
+           
+
+       <!-- <script>
+        $(document).ready(function() { 
+  setTimeout(function(){
+  $('.chainsaw').addClass('on');
+
+ 
+  }, 5000);
+});
+       </script> -->
+        <script>
+            $(document).ready(function() { 
+      setTimeout(function(){
+      $('.hudNav').addClass('on');
+    
+     
+      }, 5000);
+    });
+           </script>
+
+<script>
+    $(document).ready(function() { 
+setTimeout(function(){
+$('.HUDimg').addClass('on');
+
+
+}, 5000);
+});
+   </script>
+
+<script>
+    $(document).ready(function() { 
+setTimeout(function(){
+$('.textflash').addClass('show');
+$('.textflash').removeClass('hidden');
+
+
+}, 8000);
+});
+   </script>
+
+<script>
+    $(document).ready(function() { 
+setTimeout(function(){
+$('.video-playerClip').addClass('show');
+$('.video-playerClip').removeClass('hidden');
+
+
+}, 7800);
+});
+   </script>
+       
+    </body>
+
+</html>
